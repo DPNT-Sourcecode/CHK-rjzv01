@@ -7,16 +7,25 @@ def checkout(skus):
     # Assume that shopping list will arrive into function as a series of skus followed by the item letter #
     
     totalSum = 0
+    
+    a_sum = 0
+    b_sum = 0
+    c_sum = 0
+    d_sum = 0
 
-    n = 0
+    valid = ["A","B","C","D"]
     
     for c in skus:
-        
-        if c.isdigit():
-            n *= 10
-            n += int(c)
-            # if there are two isdigits in a row we are dealing with a 2 digit number and the calculation is made accordingly
-            
+        if c in valid:
+            if c == "A":
+                a_sum += 1
+            elif c == "B":
+                b_sum += 1
+            elif c == "C":
+                c_sum += 1
+            elif c == "D":
+                d_sum += 1
+                
         elif c.isalpha():
             if c == "A":
                 # carry out the special offer as many times as possible then the regular price for those items left over
@@ -33,4 +42,5 @@ def checkout(skus):
             n = 0
         
     return totalSum
+
 
