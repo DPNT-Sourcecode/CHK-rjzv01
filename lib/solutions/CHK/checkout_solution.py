@@ -7,13 +7,6 @@ def checkout(skus):
     # Assume that lower case are invalid #
     
     totalSum = 0
-    
-    a_sum = 0
-    b_sum = 0
-    c_sum = 0
-    d_sum = 0
-    e_sum = 0
-    f_sum = 0
 
     valid = string.ascii_uppercase # a list of all valid inputs
 
@@ -21,8 +14,6 @@ def checkout(skus):
 
     for i in range(1,26):
         sums.update({valid[i]:0}) # Create a list of sums for each indiviudal item
-    sums["A"] -= 1
-    print(sums["A"])
     
     
     for c in skus:
@@ -33,33 +24,34 @@ def checkout(skus):
 
 
     # Each time at least 3 Fs appear in the basket the third is removed for the deal
-    f_sum -= f_sum // 3
+    sums["F"] -= sums["F"] // 3
     
     # E special offer before B is calculated
-    b_sum = max(0,(b_sum - (e_sum // 2)))
+    sums["B"] = max(0,(sums["B"] - (sums["E"] // 2)))
                 
     # carry out the special offer as many times as possible then the regular price for those items left over
     
     #~A~#
-    totalSum += (a_sum // 5) * 200
-    a_sum = a_sum % 5 
-    totalSum += (a_sum // 3) * 130
-    totalSum += (a_sum % 3) * 50
+    totalSum += (sums["A"] // 5) * 200
+    sums["A"] = sums["A"] % 5 
+    totalSum += (sums["A"] // 3) * 130
+    totalSum += (sums["A"]% 3) * 50
     #~B~#
-    totalSum += (b_sum // 2) * 45
-    totalSum += (b_sum % 2) * 30
+    totalSum += (sums["B"] // 2) * 45
+    totalSum += (sums["B"] % 2) * 30
     #~C~#
-    totalSum += c_sum * 20
+    totalSum += sums["C"] * 20
     #~D~#
-    totalSum += d_sum * 15
+    totalSum += sums["D"] * 15
     #~E~#
-    totalSum += e_sum * 40
+    totalSum += sums["E"] * 40
     #~F~#
-    totalSum += f_sum * 10
+    totalSum += sums["F"] * 10
     
 
         
     return totalSum
+
 
 
 
