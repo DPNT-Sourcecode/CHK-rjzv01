@@ -47,9 +47,19 @@ def checkout(skus):
         if(sums["X"] > 0):
             extra += 17
             sums["X"] -= 1
-        elif(sums["X"] > 0 or sums["Y"] > 0 or sums["Z"] > 0):
+        elif(sums["Y"] > 0):
             extra += 20
-            sums["X"] -= 1
+            sums["Y"] -= 1
+        elif(sums["T"] > 0):
+            extra += 20
+            sums["T"] -= 1
+        elif(sums["S"] > 0):
+            extra += 20
+            sums["S"] -= 1
+        elif(sums["Z"] > 0):
+            extra += 21
+            sums["Z"] -= 1
+    totalSum += extra+(((sums["S"]+sums["T"]+sums["X"]+sums["Y"]+sums["Z"]) // 3)*45)
             
     
     
@@ -119,6 +129,7 @@ def checkout(skus):
     #~Z~#
     totalSum += sums["Z"] * 21
     return totalSum
+
 
 
 
