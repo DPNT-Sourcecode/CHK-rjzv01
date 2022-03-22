@@ -34,6 +34,10 @@ def checkout(skus):
         else:
             return -1
 
+
+    # Each time at least 3 Fs appear in the basket the third is removed for the deal
+    f_sum -= f_sum // 3
+    
     # E special offer before B is calculated
     b_sum = max(0,(b_sum - (e_sum // 2)))
                 
@@ -53,9 +57,13 @@ def checkout(skus):
     totalSum += d_sum * 15
     #~E~#
     totalSum += e_sum * 40
+    #~F~#
+    totalSum += f_sum * 10
+    
 
         
     return totalSum
+
 
 
 
