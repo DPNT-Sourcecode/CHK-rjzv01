@@ -36,6 +36,13 @@ def checkout(skus):
     sums["Q"] = max(0,(sums["Q"] - (sums["R"] // 3)))
         
     # carry out the special offer as many times as possible then the regular price for those items left over
+
+    # 3 group item deal logic
+
+    # Customers who take advantage of deals are favoured so any time it doesnt fit take lowest valued item to not be considered in the deal
+
+    print((sums["S"]+sums["T"]+sums["X"]+sums["Y"]+sums["Z"]) // 3)
+    
     
     #~A~#
     totalSum += (sums["A"] // 5) * 200
@@ -103,4 +110,5 @@ def checkout(skus):
     #~Z~#
     totalSum += sums["Z"] * 21
     return totalSum
+
 
