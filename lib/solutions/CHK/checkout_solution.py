@@ -63,8 +63,3 @@ def checkout(skus):
 
         
     return totalSum
-
-
-
-
-
