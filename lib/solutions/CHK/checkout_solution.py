@@ -26,18 +26,19 @@ def checkout(skus):
                 c_sum += 1
             elif c == "D":
                 d_sum += 1
-            elif c == "E"
+            elif c == "E":
                 e_sum += 1
         else:
             return -1
 
     # E special offer before B is calculated
-    b_sum = max(0,(b_sum - (E // 2)))
+    b_sum = max(0,(b_sum - (e_sum // 2)))
                 
     # carry out the special offer as many times as possible then the regular price for those items left over
     
     #~A~#
     totalSum += (a_sum // 5) * 200
+    a_sum = a_sum % 5 
     totalSum += (a_sum // 3) * 130
     totalSum += (a_sum % 3) * 50
     #~B~#
@@ -52,5 +53,6 @@ def checkout(skus):
 
         
     return totalSum
+
 
 
