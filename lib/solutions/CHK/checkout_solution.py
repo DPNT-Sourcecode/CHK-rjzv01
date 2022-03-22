@@ -42,7 +42,15 @@ def checkout(skus):
     # Customers who take advantage of deals are favoured so any time it doesnt fit take lowest valued item to not be considered in the deal
 
     print((sums["S"]+sums["T"]+sums["X"]+sums["Y"]+sums["Z"]) // 3)
-    if ((sums["S"]+sums["T"]+sums["X"]+sums["Y"]+sums["Z"]) % 3 != 0)
+    extra = 0
+    while ((sums["S"]+sums["T"]+sums["X"]+sums["Y"]+sums["Z"]) % 3 != 0):
+        if(sums["X"] > 0):
+            extra += 17
+            sums["X"] -= 1
+        elif(sums["X"] > 0 or sums["Y"] > 0 or sums["Z"] > 0):
+            extra += 20
+            sums["X"] -= 1
+            
     
     
     #~A~#
@@ -111,6 +119,7 @@ def checkout(skus):
     #~Z~#
     totalSum += sums["Z"] * 21
     return totalSum
+
 
 
 
