@@ -12,8 +12,9 @@ def checkout(skus):
     b_sum = 0
     c_sum = 0
     d_sum = 0
+    e_sum = 0
 
-    valid = ["A","B","C","D"] # a list of all valid inputs
+    valid = ["A","B","C","D","E"] # a list of all valid inputs
     
     for c in skus:
         if c in valid:
@@ -25,6 +26,8 @@ def checkout(skus):
                 c_sum += 1
             elif c == "D":
                 d_sum += 1
+            elif c == "E"
+                e_sum += 1
         else:
             return -1
                 
@@ -40,6 +43,9 @@ def checkout(skus):
     totalSum += c_sum * 20
     #~D~#
     totalSum += d_sum * 15
+    #~E~#
+    totalSum += e_sum * 40
 
         
     return totalSum
+
