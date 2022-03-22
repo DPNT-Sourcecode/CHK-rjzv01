@@ -20,25 +20,14 @@ def checkout(skus):
     sums = {"A":0}
 
     for i in range(1,26):
-        sums.update({valid[i]:0})
-
-    print(sums)
+        sums.update({valid[i]:0}) # Create a list of sums for each indiviudal item
+    sums["A"] -= 1
+    print(sums["A"])
     
     
     for c in skus:
         if c in valid:
-            if c == "A":
-                a_sum += 1
-            elif c == "B":
-                b_sum += 1
-            elif c == "C":
-                c_sum += 1
-            elif c == "D":
-                d_sum += 1
-            elif c == "E":
-                e_sum += 1
-            elif c == "F":
-                f_sum += 1
+            sums[c] += 1
         else:
             return -1
 
@@ -71,5 +60,6 @@ def checkout(skus):
 
         
     return totalSum
+
 
 
