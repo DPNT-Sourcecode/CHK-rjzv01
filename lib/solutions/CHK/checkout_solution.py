@@ -94,7 +94,16 @@ def checkout(skus):
     sums["V"] = sums["V"] % 3 
     totalSum += (sums["V"] // 2) * 90
     totalSum += (sums["V"]% 2) * 50
+    #~W~#
+    totalSum += sums["W"] * 20
+    #~X~#
+    totalSum += sums["X"] * 90
+    #~Y~#
+    totalSum += sums["Y"] * 10
+    #~Z~#
+    totalSum += sums["Z"] * 50
     return totalSum
+
 
 
 
