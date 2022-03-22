@@ -91,8 +91,8 @@ def checkout(skus):
     #~J~#
     totalSum += sums["J"] * 60
     #~K~#
-    totalSum += (sums["K"] // 2) * 150
-    totalSum += (sums["K"] % 2) * 80
+    totalSum += (sums["K"] // 2) * 120
+    totalSum += (sums["K"] % 2) * 70
     #~L~#
     totalSum += sums["L"] * 90
     #~M~#
@@ -119,9 +119,3 @@ def checkout(skus):
     #~W~#
     totalSum += sums["W"] * 20
     return totalSum
-
-
-
-
-
-
