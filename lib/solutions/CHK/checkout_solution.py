@@ -13,7 +13,7 @@ def checkout(skus):
     c_sum = 0
     d_sum = 0
 
-    valid = ["A","B","C","D"]
+    valid = ["A","B","C","D"] # a list of all valid inputs
     
     for c in skus:
         if c in valid:
@@ -43,6 +43,7 @@ def checkout(skus):
 
         
     return totalSum
+
 
 
 
