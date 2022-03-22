@@ -30,6 +30,8 @@ def checkout(skus):
     sums["B"] = max(0,(sums["B"] - (sums["E"] // 2)))
     
     sums["M"] = max(0,(sums["M"] - (sums["N"] // 3)))
+
+    sums["Q"] = max(0,(sums["Q"] - (sums["R"] // 3)))
         
     # carry out the special offer as many times as possible then the regular price for those items left over
     
@@ -71,8 +73,14 @@ def checkout(skus):
     totalSum += sums["N"] * 40
     #~O~#
     totalSum += sums["O"] * 10
-        
+    #~P~#
+    totalSum += (sums["P"] // 5) * 200
+    totalSum += (sums["P"] % 5) * 50
+    #~Q~#
+    totalSum += (sums["Q"] // 3) * 80
+    totalSum += (sums["Q"] % 3) * 30
     return totalSum
+
 
 
 
