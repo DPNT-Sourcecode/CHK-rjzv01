@@ -25,6 +25,8 @@ def checkout(skus):
 
     # Each time at least 3 Fs appear in the basket the third is removed for the deal
     sums["F"] -= sums["F"] // 3
+
+    sums["U"] -= sums["U"] // 4
     
     # E special offer before B is calculated
     sums["B"] = max(0,(sums["B"] - (sums["E"] // 2)))
@@ -79,7 +81,21 @@ def checkout(skus):
     #~Q~#
     totalSum += (sums["Q"] // 3) * 80
     totalSum += (sums["Q"] % 3) * 30
+    #~R~#
+    totalSum += sums["R"] * 50
+    #~S~#
+    totalSum += sums["S"] * 30
+    #~T~#
+    totalSum += sums["T"] * 20
+    #~U~#
+    totalSum += sums["U"] * 40
+    #~V~#
+    totalSum += (sums["V"] // 3) * 130
+    sums["V"] = sums["V"] % 3 
+    totalSum += (sums["V"] // 2) * 90
+    totalSum += (sums["V"]% 2) * 50
     return totalSum
+
 
 
 
