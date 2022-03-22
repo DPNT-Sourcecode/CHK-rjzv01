@@ -1,4 +1,4 @@
-
+import string
 
 # noinspection PyUnusedLocal
 # skus = unicode string
@@ -15,7 +15,7 @@ def checkout(skus):
     e_sum = 0
     f_sum = 0
 
-    valid = ["A","B","C","D","E","F"] # a list of all valid inputs
+    valid = string.ascii_uppercase # a list of all valid inputs
     
     for c in skus:
         if c in valid:
@@ -63,3 +63,4 @@ def checkout(skus):
 
         
     return totalSum
+
