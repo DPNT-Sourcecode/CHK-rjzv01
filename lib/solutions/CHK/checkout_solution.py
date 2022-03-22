@@ -47,10 +47,27 @@ def checkout(skus):
     totalSum += sums["E"] * 40
     #~F~#
     totalSum += sums["F"] * 10
-    
-
+    #~G~#
+    totalSum += sums["G"] * 20
+    #~H~#
+    totalSum += (sums["H"] // 10) * 80
+    sums["A"] = sums["H"] % 10 
+    totalSum += (sums["H"] // 5) * 45
+    totalSum += (sums["H"]% 5) * 10
+    #~I~#
+    totalSum += sums["I"] * 35
+    #~J~#
+    totalSum += sums["J"] * 60
+    #~K~#
+    totalSum += (sums["K"] // 2) * 150
+    totalSum += (sums["K"] % 2) * 80
+    #~L~#
+    totalSum += sums["L"] * 90
+    #~M~#
+    totalSum += sums["M"] * 15
         
     return totalSum
+
 
 
 
