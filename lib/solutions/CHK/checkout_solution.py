@@ -84,7 +84,7 @@ def checkout(skus):
     #~R~#
     totalSum += sums["R"] * 50
     #~S~#
-    totalSum += sums["S"] * 30
+    totalSum += sums["S"] * 20
     #~T~#
     totalSum += sums["T"] * 20
     #~U~#
@@ -97,9 +97,10 @@ def checkout(skus):
     #~W~#
     totalSum += sums["W"] * 20
     #~X~#
-    totalSum += sums["X"] * 90
+    totalSum += sums["X"] * 17
     #~Y~#
-    totalSum += sums["Y"] * 10
+    totalSum += sums["Y"] * 20
     #~Z~#
-    totalSum += sums["Z"] * 50
+    totalSum += sums["Z"] * 21
     return totalSum
+
