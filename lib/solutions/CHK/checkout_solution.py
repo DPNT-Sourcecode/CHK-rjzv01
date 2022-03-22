@@ -39,7 +39,7 @@ def checkout(skus):
 
     # 3 group item deal logic
 
-    # Customers who take advantage of deals are favoured so any time it doesnt fit take lowest valued item to not be considered in the deal
+    # Customers who take advantage of deals are favoured so any time the deal doesn't quite fit take lowest valued item to not be considered in the deal
 
     print((sums["S"]+sums["T"]+sums["X"]+sums["Y"]+sums["Z"]) // 3)
     extra = 0
@@ -109,10 +109,6 @@ def checkout(skus):
     totalSum += (sums["Q"] % 3) * 30
     #~R~#
     totalSum += sums["R"] * 50
-    #~S~#
-    totalSum += sums["S"] * 20
-    #~T~#
-    totalSum += sums["T"] * 20
     #~U~#
     totalSum += sums["U"] * 40
     #~V~#
@@ -122,13 +118,8 @@ def checkout(skus):
     totalSum += (sums["V"]% 2) * 50
     #~W~#
     totalSum += sums["W"] * 20
-    #~X~#
-    totalSum += sums["X"] * 17
-    #~Y~#
-    totalSum += sums["Y"] * 20
-    #~Z~#
-    totalSum += sums["Z"] * 21
     return totalSum
+
 
 
 
