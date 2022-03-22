@@ -16,6 +16,14 @@ def checkout(skus):
     f_sum = 0
 
     valid = string.ascii_uppercase # a list of all valid inputs
+
+    sums = {"A":0}
+
+    for i in range(1,26):
+        sums.update({valid[i]:0})
+
+    print(sums)
+    
     
     for c in skus:
         if c in valid:
@@ -63,4 +71,5 @@ def checkout(skus):
 
         
     return totalSum
+
 
