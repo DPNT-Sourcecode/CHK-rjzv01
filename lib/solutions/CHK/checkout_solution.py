@@ -57,7 +57,7 @@ def checkout(skus):
     totalSum += sums["G"] * 20
     #~H~#
     totalSum += (sums["H"] // 10) * 80
-    sums["A"] = sums["H"] % 10 
+    sums["H"] = sums["H"] % 10 
     totalSum += (sums["H"] // 5) * 45
     totalSum += (sums["H"]% 5) * 10
     #~I~#
@@ -103,12 +103,3 @@ def checkout(skus):
     #~Z~#
     totalSum += sums["Z"] * 50
     return totalSum
-
-
-
-
-
-
-
-
-
